@@ -7,7 +7,6 @@ from tensorflow.keras.applications.efficientnet import preprocess_input
 MODEL_PATH = r"D:\\KULIAH UNDIP\\SKRIPSI S NYA SANTUY\\python\\GuavaDisease_CNN_Model.tflite"
 IMAGE_PATH = r"D:\KULIAH UNDIP\SKRIPSI S NYA SANTUY\DATASET\GuavaDiseaseDataset\test\fruit_fly\22_unsharp_clahe_augmented_7.png"
 
-# Harus cocok dengan urutan class_names saat training
 CLASS_NAMES = ['anthracnose', 'fruit_fly', 'healthy_guava']
 
 # Load TFLite model
@@ -21,7 +20,7 @@ output_details = interpreter.get_output_details()
 # Load dan preprocess gambar
 img = Image.open(IMAGE_PATH).convert('RGB').resize((224, 224))
 img_array = np.array(img).astype(np.float32)
-img_array = preprocess_input(img_array)  # PENTING untuk EfficientNet
+img_array = preprocess_input(img_array) 
 img_array = np.expand_dims(img_array, axis=0)
 
 # Set input
