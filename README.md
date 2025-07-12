@@ -17,7 +17,10 @@ This project implements a Convolutional Neural Network (CNN) model using the Res
 
 2. Install dependencies
 * Make sure you have Python 3.x installed along with the following packages:
+```bash
 pip install tensorflow matplotlib seaborn scikit-learn
+```
+
 
 3. Run the notebook
 * Open CNN-Guava-Disease.ipynb in Jupyter Notebook or Visual Studio Code.
